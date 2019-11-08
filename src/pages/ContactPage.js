@@ -68,7 +68,7 @@ class ContactPage extends React.Component {
                   id="full-name"
                   name="name"
                   type="text"
-                  value={this.state.name}
+                  value={this.state.title}
                   onChange={this.handleChange}
                 />
               </Form.Group>
@@ -79,7 +79,7 @@ class ContactPage extends React.Component {
                   name="message"
                   as="textarea"
                   rows="3"
-                  value={this.state.message}
+                  value={this.state.content}
                   onChange={this.handleChange}
                 />
               </Form.Group>
