@@ -60,46 +60,44 @@ class ContactPage extends React.Component {
         <Hero title={this.props.title} />
 
         <Content>
-          <Form>
-            <form onSubmit={this.handleSubmit}>
-              <Form.Group>
-                <Form.Label htmlFor="full-name">Title</Form.Label>
-                <Form.Control
-                  id="full-name"
-                  name="name"
-                  type="text"
-                  value={this.state.title}
-                  onChange={this.handleChange}
-                />
-              </Form.Group>
-              <Form.Group>
-                <Form.Label htmlFor="message">Message</Form.Label>
-                <Form.Control
-                  id="message"
-                  name="message"
-                  as="textarea"
-                  rows="3"
-                  value={this.state.content}
-                  onChange={this.handleChange}
-                />
-              </Form.Group>
+          <Form onSubmit={this.handleSubmit}>
+            <Form.Group>
+              <Form.Label htmlFor="full-name">Title</Form.Label>
+              <Form.Control
+                id="full-name"
+                name="name"
+                type="text"
+                value={this.state.title}
+                onChange={this.handleChange}
+              />
+            </Form.Group>
+            <Form.Group>
+              <Form.Label htmlFor="message">Message</Form.Label>
+              <Form.Control
+                id="message"
+                name="message"
+                as="textarea"
+                rows="3"
+                value={this.state.content}
+                onChange={this.handleChange}
+              />
+            </Form.Group>
 
-              <Button
-                className="button"
-                varient="primary"
-                type="submit"
-                disabled={this.state.disabled}
-              >
-                Send
-              </Button>
+            <Button
+              className="button"
+              varient="primary"
+              type="submit"
+              disabled={this.state.disabled}
+            >
+              Send
+            </Button>
 
-              {this.state.emailSent === true && (
-                <p className="d-inline success-msg">Email Sent</p>
-              )}
-              {this.state.emailSent === false && (
-                <p className="d-inline err-msg">Email Not Sent</p>
-              )}
-            </form>
+            {this.state.emailSent === true && (
+              <p className="d-inline success-msg">Email Sent</p>
+            )}
+            {this.state.emailSent === false && (
+              <p className="d-inline err-msg">Email Not Sent</p>
+            )}
           </Form>
         </Content>
       </div>
