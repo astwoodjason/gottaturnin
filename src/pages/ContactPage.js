@@ -9,11 +9,9 @@ class ContactPage extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      name: "",
-      email: "",
-      message: "",
-      disabled: "false",
-      emailSent: "null"
+      title: [],
+      content: [],
+      message: ""
     };
   }
 
@@ -65,7 +63,7 @@ class ContactPage extends React.Component {
           <Form>
             <form onSubmit={this.handleSubmit}>
               <Form.Group>
-                <Form.Label htmlFor="full-name">Full Name</Form.Label>
+                <Form.Label htmlFor="full-name">Title</Form.Label>
                 <Form.Control
                   id="full-name"
                   name="name"
@@ -74,18 +72,6 @@ class ContactPage extends React.Component {
                   onChange={this.handleChange}
                 />
               </Form.Group>
-
-              <Form.Group>
-                <Form.Label htmlFor="email">Email</Form.Label>
-                <Form.Control
-                  id="email"
-                  name="email"
-                  type="email"
-                  value={this.state.email}
-                  onChange={this.handleChange}
-                />
-              </Form.Group>
-
               <Form.Group>
                 <Form.Label htmlFor="message">Message</Form.Label>
                 <Form.Control
